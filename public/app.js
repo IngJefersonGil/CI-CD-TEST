@@ -1,12 +1,13 @@
-function sum(a, b) {
+function suma(a, b) {
     return a + b;
 }
 
-function handleSum() {
-    const a = Number(document.getElementById("num1").value);
-    const b = Number(document.getElementById("num2").value);
+function calcular() {
+    const a = parseFloat(document.getElementById('a').value);
+    const b = parseFloat(document.getElementById('b').value);
+    document.getElementById('resultado').textContent = 'Resultado: ' + suma(a, b);
+}
 
-    const result = sum(a, b);
-
-    document.getElementById("result").innerText = "Result: " + result;
+if (typeof module !== 'undefined') {
+    module.exports = { suma };
 }
